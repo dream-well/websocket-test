@@ -1,0 +1,16 @@
+<html>
+
+<body>
+    Your ip is: 
+    <div id="ip"></div>
+    <script>
+        const ws = new WebSocket('ws://'+window.location.host+":8080");
+        ws.onopen = () => {
+            console.log("connected");
+        }
+        ws.onmessage = (msg) => {
+            document.getElementById("ip").innerHTML = msg;
+        }
+    </script>
+</body>
+</html>

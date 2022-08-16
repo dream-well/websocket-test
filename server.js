@@ -1,4 +1,11 @@
 import WebSocket, { WebSocketServer } from 'ws';
+import express from 'express'
+
+const app = express();
+
+app.use(express.static("./public"));
+
+app.listen(80, () => {});
 
 const wss = new WebSocketServer({
   port: 8080,
@@ -25,4 +32,5 @@ const wss = new WebSocketServer({
 
 wss.on("connection", (socket, req) => {
     console.log(req.socket.remoteAddress);
+    socket.send(req.socket.remoteAddress);
 })

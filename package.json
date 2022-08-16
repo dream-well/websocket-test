@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/dream-well/websocket-test/issues"
   },
-  "homepage": "https://github.com/dream-well/websocket-test#readme"
+  "homepage": "https://github.com/dream-well/websocket-test#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
