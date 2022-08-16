@@ -9,7 +9,7 @@
             console.log("connected");
         }
         ws.onmessage = (msg) => {
-            document.getElementById("ip").innerHTML = msg;
+            document.getElementById("ip").innerHTML = msg.data;
         }
     </script>
 </body>
